@@ -9,8 +9,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "rebuild": "vite build && rm -R docs && cp -r dist docs",
-    "git": "git add . && git commit && git push origin main",
-    "postbuild": "cp dist/index.html dist/404.html"
+    "git": "git add . && git commit && git push origin main"
   },
   "dependencies": {
     "react": "^18.3.1",
