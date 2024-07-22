@@ -23,7 +23,7 @@ const Header = ({ messages, inputAble, setInputAble}) => {
   return (
     <header className="App-header">
       <h1>
-        <span id="title">Open Dialogue Chatbot</span>
+        <span id="title">chatGPT</span>
         {/* <div className={`switch_outer ${inputAble ? 'active' : ''}`} onClick={toggleSwitch}>
           <div className={`toggle_switch ${inputAble ? 'active' : ''}`}></div>
         </div> */}

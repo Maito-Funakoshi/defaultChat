@@ -9,10 +9,10 @@ const ChatBox = ({ names, namesEng, messages, error }) => {
     switch (nameEng) {
       case namesEng[0]:
         return names[0];
-      case namesEng[1]:
-        return names[1];
-      case namesEng[2]:
-        return names[2];
+      // case namesEng[1]:
+      //   return names[1];
+      // case namesEng[2]:
+      //   return names[2];
       default:
         return '';
     }
@@ -22,10 +22,10 @@ const ChatBox = ({ names, namesEng, messages, error }) => {
     switch (nameEng) {
       case namesEng[0]:
         return A;
-      case namesEng[1]:
-        return B;
-      case namesEng[2]:
-        return C;
+      // case namesEng[1]:
+      //   return B;
+      // case namesEng[2]:
+      //   return C;
       case 'system':
         return system;
       default:

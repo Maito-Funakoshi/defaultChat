@@ -1,1 +1,3 @@
 # defaultChat
+Webアプリの実験で比較するためのアプリです
+Webアプリと同じUIでプロンプトを仕込んでいないchatGPTのAIが返答します
