@@ -1,68 +1,199 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+/* 全体 */
+html, body {
+  height: 100%;
+  padding: 0;
   margin: 0;
+  background-color: #8CABD8;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+/* ヘッダー */
+header.App-header {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  margin: 0px;
+  background-color: #8CABD8;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 10;
+  box-sizing: border-box;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header.App-header h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+header.App-header h1 span#title {
+  flex: 1;
+  text-align: left;
+  font-size: 18px;
+  color: black;
+  margin: 0;
+  line-height: 60px;
+}
+header.App-header h1 div.recipients {
+  margin-right: 20px;
+}
+header.App-header h1 div.recipients label {
+  font-size: 16px;
+  color: black;
+}
+/* .switch_outer {
+  width: 48px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  background-color: lightgray;
+  border-radius: 30px;
+  position: relative;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color .2s ease-in-out;
 }
-button:hover {
-  border-color: #646cff;
+.switch_outer.active {
+  background-color: #51E373;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.toggle_switch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 2px;
+  margin: auto;
+  box-shadow: 1px 1px 7px #B7B7B7, -1px -1px 4px #CECECE inset;
+  transition: left .3s ease-in-out;
+}
+.toggle_switch.active {
+  left: 26px;
+} */
+header.App-header h1 button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+header.App-header h1 button img {
+  height: 24px;
+  width: 24px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/* チャットボックス */
+.chat-box {
+  display: flex;
+  flex-flow: column;
+  padding: 10px 10px 68.5px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  overflow-y: auto;
+  height: calc(100% - 100px); /* 100% - (margin-top + margin-bottom) */
+  background-color: #8CABD8;
+  color: black;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+.chat-box div {
+  display: flex;
+  margin: 0;
+  padding: 10px;
+}
+.chat-box div img {
+  padding-right: 5px;
+  height: 38px;
+  width: 38px;
+}
+div.message {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.message .recipient{
+  padding: 0;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.message p {
+  margin: 0;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  word-wrap: break-word;
+}
+.chat-box div.You{
+  align-self: flex-end;
+}
+.user {
+  align-self: flex-end;
+  text-align: left;
+  max-width: 60vw;
+  background-color: #6DE67A;
+}
+.assistant {
+  align-self: flex-start;
+  text-align: left;
+  max-width: 60vw;
+}
+.assistant.chat {
+  background-color: white;
+}
+.assistant.reflect {
+  background-color: grey;
+}
+.system.chat {
+  background-color: white;
+}
+
+/* 入力フォーム */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  padding: 0;
+  z-index: 10;
+  box-sizing: border-box;
+}
+form input {
+  flex: 1;
+  padding: 10px;
+  margin: 0 10px;
+  border: solid #E8E8E8;
+  border-width: thin;
+  border-radius: 20px;
+  background-color: #F5F5F5;
+  font-size: 16px;
+}
+form input[type="text"]::placeholder {
+  color: grey;
+}
+form button {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  height: 58.5px;
+}
+form button img {
+  height: 38px;
+  width: 38px;
 }
