@@ -31,37 +31,33 @@ const AssistantResponses = ({ recipient, setRecipient, names, namesEng, messages
                 ];
                 let response = await clients[0].getChatCompletions(deploymentId, modifiedMessages);
 
+                // 発言様式を整備する
+                const odMessages = [
+                    { role: "system", content: `${common}`},
+                    { role: "user", content: `${response.choices[0].message.content.trim()}`}
+                ];
+                response = await clients[0].getChatCompletions(deploymentId, odMessages);
 
+                // その他修正を適宜する
+                const complementMessages = [
+                    { role: "system", content: `${complementChat}`},
+                    { role: "user", content: `${response.choices[0].message.content.trim()}`}
+                ]
+                response = await clients[0].getChatCompletions(deploymentId, complementMessages);
 
-                // // 発言様式を整備する
-                // const odMessages = [
-                //     { role: "system", content: `${common}`},
-                //     { role: "user", content: `${response.choices[0].message.content.trim()}`}
-                // ];
-                // response = await clients[0].getChatCompletions(deploymentId, odMessages);
-
-                // // その他修正を適宜する
-                // const complementMessages = [
-                //     { role: "system", content: `${complementChat}`},
-                //     { role: "user", content: `${response.choices[0].message.content.trim()}`}
-                // ]
-                // response = await clients[0].getChatCompletions(deploymentId, complementMessages);
-
-                // // 返答を要約する
-                // const summaryMessages = [
-                //     { role: "system", content: `${summary}`},
-                //     { role: "user", content: `${response.choices[0].message.content.trim()}`}
-                // ]
-                // response = await clients[0].getChatCompletions(deploymentId, summaryMessages);
-
-
+                // 返答を要約する
+                const summaryMessages = [
+                    { role: "system", content: `${summary}`},
+                    { role: "user", content: `${response.choices[0].message.content.trim()}`}
+                ]
+                response = await clients[0].getChatCompletions(deploymentId, summaryMessages);
 
                 if (response.choices && response.choices.length > 0) {
                   const botMessage = response.choices[0].message.content.trim();
                   const assistantMessage = { role: "assistant", content: `${botMessage}`, name: `${namesEng[0]}`, mode: "chat"};
                   currentMessages = [...currentMessages, assistantMessage];
                   setMessages(prevMessages => [...prevMessages, assistantMessage]);
-                  // setRecipient((recipient + 1) % names.length);
+                  setRecipient((recipient + 1) % names.length);
                 }
               } catch (err) {
                 setError(err);
