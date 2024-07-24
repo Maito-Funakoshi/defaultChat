@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { OpenAIClient, AzureKeyCredential } from "@azure/openai";
+import os from 'os';
 import OpenAI from "openai";
 
 const AssistantResponses = ({ names, namesEng, messages, setMessages, characters, chat, common, complementChat, summary, reflectChatCount, setError }) => {
@@ -18,6 +19,7 @@ const AssistantResponses = ({ names, namesEng, messages, setMessages, characters
   // const clients = names.map(() => new OpenAIClient(endpoint, new AzureKeyCredential(azureApiKey)));
 
   //openaidialogue1
+
   const openai = new OpenAI({
     apiKey: "sk-proj-zoaaHLyoitixvwwHJmVaT3BlbkFJw9ShXV7lkl2ZhZwPAA7a",
     dangerouslyAllowBrowser: true
