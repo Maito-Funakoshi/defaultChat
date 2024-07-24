@@ -19,9 +19,8 @@ const AssistantResponses = ({ names, namesEng, messages, setMessages, characters
   // const clients = names.map(() => new OpenAIClient(endpoint, new AzureKeyCredential(azureApiKey)));
 
   //openaidialogue1
-
   const openai = new OpenAI({
-    apiKey: "sk-proj-zoaaHLyoitixvwwHJmVaT3BlbkFJw9ShXV7lkl2ZhZwPAA7a",
+    apiKey: OPENAI_API_KEY,
     dangerouslyAllowBrowser: true
   })
 
