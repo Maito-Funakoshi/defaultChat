@@ -21,6 +21,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+    OPENAI_API_KEY: ${{secrets.OPENAI_API_KEY}}
+    
 jobs:
   # Build job
   build:
