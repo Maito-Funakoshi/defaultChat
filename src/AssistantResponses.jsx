@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { OpenAIClient, AzureKeyCredential } from "@azure/openai";
+// import { OpenAIClient, AzureKeyCredential } from "@azure/openai";
 import os from 'os';
 import OpenAI from "openai";
 
