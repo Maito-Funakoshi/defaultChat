@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 // import { OpenAIClient, AzureKeyCredential } from "@azure/openai";
-import os from 'os';
+// import os from 'os';
 import OpenAI from "openai";
 
 const AssistantResponses = ({ names, namesEng, messages, setMessages, characters, chat, common, complementChat, summary, reflectChatCount, setError }) => {
