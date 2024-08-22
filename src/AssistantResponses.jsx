@@ -22,8 +22,7 @@ const AssistantResponses = ({ names, namesEng, messages, setMessages, characters
               ];
               let response = await openai.chat.completions.create({
                 model: "gpt-4o",
-                messages: chatMessages,
-                temperature: 0
+                messages: chatMessages
               })
 
               if (response.choices && response.choices.length > 0) {
