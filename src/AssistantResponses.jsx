@@ -21,7 +21,7 @@ const AssistantResponses = ({ names, namesEng, messages, setMessages, characters
                   ...currentMessages.map(message => ({...message, role: "user"}))
               ];
               let response = await openai.chat.completions.create({
-                frequency_penalty : 1,
+                frequency_penalty : 2,
                 model: "gpt-4o",
                 messages: chatMessages
               })
