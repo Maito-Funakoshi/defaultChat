@@ -21,7 +21,7 @@ const AssistantResponses = ({ names, namesEng, messages, setMessages, characters
                   ...currentMessages.map(message => ({...message, role: "user"}))
               ];
               let response = await openai.chat.completions.create({
-                logit_bias: {95839:50, 178757:50},
+                logit_bias: {95839:1, 178757:75},
                 model: "gpt-4o",
                 messages: chatMessages
               })
