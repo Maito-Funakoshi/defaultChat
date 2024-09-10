@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect, useRef } from 'react';
 import A from "../images/A.png";
 import system from "../images/system.png";
 
