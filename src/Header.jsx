@@ -27,7 +27,7 @@ const Header = ({ messages }) => {
         {/* <div className={`switch_outer ${inputAble ? 'active' : ''}`} onClick={toggleSwitch}>
           <div className={`toggle_switch ${inputAble ? 'active' : ''}`}></div>
         </div> */}
-        <button onClick={handleGetLog}><img src={downloadIcon} alt="ダウンロード" /></button>
+        {/* <button onClick={handleGetLog}><img src={downloadIcon} alt="ダウンロード" /></button> */}
       </h1>
     </header>
   );
