@@ -37,7 +37,6 @@ const AssistantResponses = ({ names, namesEng, messages, setMessages, characters
               if (response.choices && response.choices.length > 0) {
                 const botMessage = response.choices[0].message.content.trim();
                 const assistantMessage = { role: "assistant", content: `${botMessage}`, name: `${namesEng[0]}`, mode: "chat"};
-                currentMessages = [...currentMessages, assistantMessage];
                 setMessages(prevMessages => [...prevMessages, assistantMessage]);
               }
             } catch (err) {
