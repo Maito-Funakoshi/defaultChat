@@ -49,9 +49,13 @@ const ChatBox = ({ names, namesEng, messages, error }) => {
             {imageSrc && <img src={imageSrc} alt={msg.name} />}
             <div className="message">
               {name && <p className="recipient">{name}</p>}
-              <p className={`${msg.role} ${msg.mode}`}>
+              {/* <p className={`${msg.role} ${msg.mode}`}>
                 {msg.content}
-              </p>
+              </p> */}
+              <p 
+                className={`${msg.role} ${msg.mode}`} 
+                dangerouslySetInnerHTML={{ __html: marked(msg.content) }}
+              />
             </div>
           </div>
         );
