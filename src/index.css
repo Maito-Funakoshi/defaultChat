@@ -131,14 +131,7 @@ div.message {
   padding-left: 5px;
   font-size: 12px;
 }
-.message p {
-  margin: 0;
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  word-wrap: break-word;
-}
-.message div {
+.message div p {
   margin: 0;
   border: none;
   border-radius: 20px;
