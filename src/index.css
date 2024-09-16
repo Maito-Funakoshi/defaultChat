@@ -132,6 +132,8 @@ div.message {
   font-size: 12px;
 }
 .message div {
+  display: flex;
+  flex-flow: column;
   margin: 0;
   border: none;
   border-radius: 20px;
