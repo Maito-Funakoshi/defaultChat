@@ -139,6 +139,7 @@ div.message {
 }
 .message div p {
   padding: 0;
+  margin: 0;
 }
 .chat-box div.You{
   align-self: flex-end;
