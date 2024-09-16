@@ -140,7 +140,6 @@ div.message {
 }
 .message div {
   margin: 0;
-  padding: 10px;
   border: none;
   border-radius: 20px;
   word-wrap: break-word;
