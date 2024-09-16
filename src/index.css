@@ -96,7 +96,7 @@ header.App-header h1 button img {
 }
 
 /* チャットボックス */
-/* .chat-box {
+.chat-box {
   display: flex;
   flex-flow: column;
   padding: 10px 10px 68.5px;
@@ -111,6 +111,7 @@ header.App-header h1 button img {
 }
 .chat-box div {
   display: flex;
+  align-items: flex-start;
   margin: 0;
   padding: 10px;
 }
@@ -118,6 +119,7 @@ header.App-header h1 button img {
   padding-right: 5px;
   height: 38px;
   width: 38px;
+  flex-shrink: 0;
 }
 div.message {
   display: flex;
@@ -130,6 +132,13 @@ div.message {
   font-size: 12px;
 }
 .message p {
+  margin: 0;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  word-wrap: break-word;
+}
+.message div {
   margin: 0;
   padding: 10px;
   border: none;
@@ -156,80 +165,6 @@ div.message {
 .assistant.reflect {
   background-color: grey;
 }
-.system.chat {
-  background-color: white;
-} */
-.chat-box {
-  display: flex;
-  flex-direction: column;
-  padding: 10px 10px 68.5px;
-  margin-top: 60px;
-  margin-bottom: 40px;
-  overflow-y: auto;
-  height: calc(100% - 100px); /* 100% - (margin-top + margin-bottom) */
-  background-color: #8CABD8;
-  color: black;
-  box-sizing: border-box;
-  overflow: scroll;
-}
-
-.chat-box div {
-  display: block; /* フレックスを解除して、各メッセージを縦に配置 */
-  margin: 0;
-  padding: 10px;
-}
-
-.chat-box div img {
-  padding-right: 5px;
-  height: 38px;
-  width: 38px;
-}
-
-div.message {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-
-.message .recipient {
-  padding: 0;
-  padding-left: 5px;
-  font-size: 12px;
-}
-
-.message p {
-  margin: 0;
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  word-wrap: break-word;
-}
-
-.chat-box div.You {
-  align-self: flex-end;
-}
-
-.user {
-  align-self: flex-end;
-  text-align: left;
-  max-width: 60vw;
-  background-color: #6DE67A;
-}
-
-.assistant {
-  align-self: flex-start;
-  text-align: left;
-  max-width: 60vw;
-}
-
-.assistant.chat {
-  background-color: white;
-}
-
-.assistant.reflect {
-  background-color: grey;
-}
-
 .system.chat {
   background-color: white;
 }
