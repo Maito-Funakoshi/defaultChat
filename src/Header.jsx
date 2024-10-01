@@ -23,7 +23,7 @@ const Header = ({ messages }) => {
   return (
     <header className="App-header">
       <h1>
-        <span id="title">chatGPT</span>
+        <span id="title">ODC</span>
         {/* <div className={`switch_outer ${inputAble ? 'active' : ''}`} onClick={toggleSwitch}>
           <div className={`toggle_switch ${inputAble ? 'active' : ''}`}></div>
         </div> */}
