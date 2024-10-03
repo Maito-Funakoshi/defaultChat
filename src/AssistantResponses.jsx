@@ -33,7 +33,6 @@ const AssistantResponses = ({ names, namesEng, messages, setMessages, characters
                 messages: commonMessages,
                 temperature: 1.2
               })
-              console.log("something")
 
               if (response.choices && response.choices.length > 0) {
                 const botMessage = response.choices[0].message.content.trim();
