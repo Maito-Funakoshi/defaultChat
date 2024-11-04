@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect, useRef } from 'react';
 import A from "../images/A.png";
 import system from "../images/system.png";
-import { marked } from 'marked';//追加した点
+import { marked } from 'marked';
 
 const ChatBox = ({ names, namesEng, messages, error }) => {
   const getName = (nameEng) => {

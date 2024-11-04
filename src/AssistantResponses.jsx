@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 // import os from 'os';
 import OpenAI from "openai";
 
-const AssistantResponses = ({ names, namesEng, messages, setMessages, theme, setTheme, characters, chat, common, complementChat, summary, reflectChatCount, setError }) => {
+const AssistantResponses = ({ names, namesEng, messages, setMessages, theme, setTheme, characters, chat, setError }) => {
   //openaidialogue1
   const openai = new OpenAI({
     apiKey: import.meta.env.VITE_OPENAI_API_KEY,

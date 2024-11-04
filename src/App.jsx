@@ -18,21 +18,6 @@ function App() {
   const chat = [
 
   ]
-  const common = [
-    "あなたは以下の要件を満たすようにユーザの発した文章を言い換えるアシスタントです。\n" +
-    "- 200文字以内で発言する。\n" +
-    "- 柔らかい口調で親身に発言する。\n" +
-    "- 「治療者: 」、「患者: 」、「高橋: 」、「西村: 」、「山田: 」、「Takahashi」、「Nishimura」、「Yamada」という表記を含む場合、その表記を消去してください。\n" +
-    "- 「他のスタッフと同じことは言いません」とは言わない。\n" +
-    "- メッセージ全体を鉤括弧で括らない。\n" +
-    "- すでに他の治療スタッフが言っているようなことと同じ趣旨のことは発言しない。\n"
-  ]
-  const complementChat = [
-
-  ]
-  const summary = [
-
-  ]
 
   //最初のメッセージ
   const greetingAssistantMessages = [
@@ -47,13 +32,12 @@ function App() {
   //変数設定
   const [theme, setTheme] = useState(null);
   const [error, setError] = useState(null);
-  const [reflectChatCount, setReflectChatCount] = useState(4);
 
   //HTML部分
   return (
     <div className="App">
       <Header messages = {messages} />
-      <AssistantResponses names = {names}　namesEng = {namesEng} messages = {messages} setMessages = {setMessages} theme = {theme} setTheme = {setTheme}　characters = {characters} chat = {chat} common = {common} complementChat = {complementChat} summary = {summary} reflectChatCount = {reflectChatCount} setError = {setError} />
+      <AssistantResponses names = {names}　namesEng = {namesEng} messages = {messages} setMessages = {setMessages} theme = {theme} setTheme = {setTheme}　characters = {characters} chat = {chat} setError = {setError} />
       <ChatBox names = {names} namesEng = {namesEng}　messages = {messages} error = {error} />
       <MessageInput setMessages = {setMessages} />
     </div>
